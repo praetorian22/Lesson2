@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int redCount;    
     [SerializeField] private GameObject player;    
     [SerializeField] private int startHealtPlayer;
+    [SerializeField] private Transform startPositionPlayer;
     private UIManager uiManager;
     private SpawnerTanks spawnerTanks;
     private SpawnerRemains spawnerRemains;
     private EffectManager effectManager;
+    private bool isGame;
 
 
     private void Start()
@@ -23,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     private void StartGame()
     {
+        isGame = true;
+        player.transform.position = startPositionPlayer.position;
         uiManager.ChangeScreen(Screens.game);
         for (int i = 0; i < blueCount; i++)
         {
@@ -36,10 +40,23 @@ public class GameManager : MonoBehaviour
         spawnerRemains.StartSpawn();
     }
 
-    private void EndGame(GameObject player, TypeTank typeTank)
+    private void PlayerDead(GameObject player, TypeTank typeTank)
+    {
+        isGame = false;
+        EndGame(false);
+    }
+
+    private void PlayerWin()
+    {
+        if (isGame) EndGame(true);
+        isGame = false;
+    }
+
+    private void EndGame(bool blue)
     {
         player.transform.position = Vector3.zero;
         uiManager.ChangeScreen(Screens.menu);
+        uiManager.EndGame(blue);
         spawnerTanks.DestroyAllTank();
         spawnerRemains.StopSpawn();
         spawnerRemains.DestroyAllRemains();        
@@ -55,19 +72,23 @@ public class GameManager : MonoBehaviour
         spawnerTanks.tankDeadEvent += spawnerRemains.SpawnAfterTankDead;
         spawnerTanks.tankDeadEvent += effectManager.Explosion;
         player.GetComponent<HealthScript>().changeHealthEvent += uiManager.TextHealthOut;
-        player.GetComponent<HealthScript>().deadEvent += EndGame;
+        player.GetComponent<HealthScript>().deadEvent += PlayerDead;
+        player.GetComponent<HealthScript>().shotEvent += effectManager.ExplosionMini;
         spawnerTanks.tankCountChangeEvent += uiManager.TankCountOut;
+        spawnerTanks.noRedTanksEvent += PlayerWin;
     }
     private void OnDisable()
     {
         if (player != null)
         {
             player.GetComponent<HealthScript>().changeHealthEvent -= uiManager.TextHealthOut;
-            player.GetComponent<HealthScript>().deadEvent -= EndGame;
+            player.GetComponent<HealthScript>().deadEvent -= PlayerDead;
+            player.GetComponent<HealthScript>().shotEvent -= effectManager.ExplosionMini;
         }
         spawnerTanks.tankCountChangeEvent -= uiManager.TankCountOut;
         spawnerTanks.tankDeadEvent -= spawnerRemains.SpawnAfterTankDead;
         spawnerTanks.tankDeadEvent -= effectManager.Explosion;
         uiManager.newGameEvent -= StartGame;
+        spawnerTanks.noRedTanksEvent -= PlayerWin;
     }
 }

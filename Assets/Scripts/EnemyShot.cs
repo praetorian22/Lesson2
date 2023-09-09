@@ -19,7 +19,7 @@ public class EnemyShot : MonoBehaviour
     {
         foreach (WeaponScript ws in weaponScripts)
         {
-            ws.Shot(transform.rotation, transform.parent);
+            if (ws.enabled) ws.Shot(transform.rotation, transform.parent);
         }        
     }
 

@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         foreach (WeaponScript ws in weaponScripts)
         {
-            ws.Shot(tank.rotation, transform.parent);
+            if (ws.enabled) ws.Shot(tank.rotation, transform.parent);
         }               
     }
 

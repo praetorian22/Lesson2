@@ -5,9 +5,10 @@ using System;
 
 public class UpgradeTank : MonoBehaviour
 {
-    private int level;
+    private int level;    
     private int metalRemains;
 
+    [SerializeField] private int maxLevel;
     [SerializeField] private List<int> levelUpPoints = new List<int>();
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private List<Sprite> tankTextures = new List<Sprite>();
@@ -16,10 +17,13 @@ public class UpgradeTank : MonoBehaviour
 
     private void AddRemains(int count)
     {
-        metalRemains += count;
-        if (metalRemains >= levelUpPoints[level])
+        if (level != maxLevel)
         {
-            LevelUp();
+            metalRemains += count;
+            if (metalRemains >= levelUpPoints[level])
+            {
+                LevelUp();
+            }
         }
     }
     private void LevelUp()

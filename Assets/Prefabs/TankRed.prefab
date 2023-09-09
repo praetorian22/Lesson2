@@ -285,7 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4904c542bf1ae9142a6be508787e8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelUpPoints: 640000002c010000
+  maxLevel: 2
+  levelUpPoints: 0a00000032000000
   spriteRenderer: {fileID: 2167887009401739513}
   tankTextures:
   - {fileID: -1234117907, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
@@ -416,7 +417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   timeRepositionMin: 3
-  timeRepositionMax: 15
+  timeRepositionMax: 10
 --- !u!50 &4107248926978078197
 Rigidbody2D:
   serializedVersion: 4

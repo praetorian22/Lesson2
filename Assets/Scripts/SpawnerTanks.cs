@@ -14,6 +14,7 @@ public class SpawnerTanks: MonoBehaviour
 
     public Action<TypeTank, int> tankCountChangeEvent;
     public Action<Vector3> tankDeadEvent;
+    public Action noRedTanksEvent;
 
     private void Start()
     {
@@ -52,6 +53,7 @@ public class SpawnerTanks: MonoBehaviour
             tankCountChangeEvent?.Invoke(typeTank, BlueTanks.Count);
         }
         tankDeadEvent?.Invoke(gameObject.transform.position);
+        if (RedTanks.Count == 0) noRedTanksEvent?.Invoke();
         Destroy(gameObject);
     }
 
@@ -67,7 +69,7 @@ public class SpawnerTanks: MonoBehaviour
         foreach (GameObject tank in RedTanksCopy)
         {
             Destroy(tank);
-            BlueTanks.Remove(tank);
+            RedTanks.Remove(tank);
         }
     }
 }
