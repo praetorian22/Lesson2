@@ -4,31 +4,31 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-    [SerializeField] private GameObject shotPrefab;
-    [SerializeField] private float timeReloadMin;
-    [SerializeField] private float timeReloadMax;
-    [SerializeField] private Transform pointToShot;
+    [SerializeField] private GameObject _shotPrefab;
+    [SerializeField] private float _timeReloadMin;
+    [SerializeField] private float _timeReloadMax;
+    [SerializeField] private Transform _pointToShot;
     
 
-    private bool readyToShot;    
+    private bool _readyToShot;    
 
     private void Start()
     {
-        readyToShot = true;
+        _readyToShot = true;
     }
 
     public IEnumerator ReloadTimer()
     {
-        readyToShot = false;
-        yield return new WaitForSeconds(Random.Range(timeReloadMin, timeReloadMax));
-        readyToShot = true;
+        _readyToShot = false;
+        yield return new WaitForSeconds(Random.Range(_timeReloadMin, _timeReloadMax));
+        _readyToShot = true;
     }
 
     public void Shot(Quaternion rotation, Transform parent)
     {
-        if (readyToShot)
+        if (_readyToShot)
         {
-            GameObject shot = Instantiate(shotPrefab, pointToShot.position, rotation, parent);            
+            GameObject shot = Instantiate(_shotPrefab, _pointToShot.position, rotation, parent);            
             StartCoroutine(ReloadTimer());
         }
     }

@@ -45,13 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4904c542bf1ae9142a6be508787e8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLevel: 2
-  levelUpPoints: 0a00000032000000
-  spriteRenderer: {fileID: 2641550299511108965}
-  tankTextures:
-  - {fileID: -2078723621, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
-  - {fileID: 1957014284, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
-  - {fileID: -456218557, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
+  _maxLevel: 2
+  _levelUpPoints: 3200000064000000
+  _spriteRenderer: {fileID: 2641550299511108965}
+  _tankTextures:
+  - {fileID: 184476739, guid: eafe231bba859d44e9da342d7f10a1da, type: 3}
+  - {fileID: 1267716097, guid: eafe231bba859d44e9da342d7f10a1da, type: 3}
 --- !u!58 &8421687200452637522
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -113,10 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
-  timeReloadMin: 3
-  timeReloadMax: 6
-  pointToShot: {fileID: 7273849540225940681}
+  _shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 5
+  _pointToShot: {fileID: 7273849540225940681}
 --- !u!1 &729010622502033138
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,10 +161,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
-  timeReloadMin: 3
-  timeReloadMax: 6
-  pointToShot: {fileID: 2104678238599939801}
+  _shotPrefab: {fileID: 5189488823735920756, guid: edf5cd4c9557ce643886105538bb7b3c, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 5
+  _pointToShot: {fileID: 2104678238599939801}
 --- !u!1 &2392413682785059407
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,10 +241,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 5189488823735920756, guid: edf5cd4c9557ce643886105538bb7b3c, type: 3}
-  timeReloadMin: 3
-  timeReloadMax: 6
-  pointToShot: {fileID: 533690383698467049}
+  _shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 5
+  _pointToShot: {fileID: 533690383698467049}
 --- !u!1 &3752794308647399291
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,10 +321,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
-  timeReloadMin: 3
-  timeReloadMax: 6
-  pointToShot: {fileID: 2527529563849200368}
+  _shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 5
+  _pointToShot: {fileID: 2527529563849200368}
 --- !u!1 &6256041645724726308
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,9 +432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1db5323ee93de48bf581205cb42ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  timeRepositionMin: 3
-  timeRepositionMax: 10
+  _speed: 2
+  _timeRepositionMin: 3
+  _timeRepositionMax: 9
 --- !u!50 &162882326556924009
 Rigidbody2D:
   serializedVersion: 4
@@ -495,11 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529b8dbf7792b3645a4bb7e90c4f165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponScripts:
-  - {fileID: 1692326839357480243}
-  - {fileID: 1501928480416990182}
-  - {fileID: 7351533427560527039}
-  - {fileID: 7170925081510953723}
+  _weaponScripts: []
 --- !u!114 &4133653546514624148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,9 +507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e82ee001a347334e8e4a2dcb662ff81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  isEnemy: 0
-  healthUp: 020000000400000008000000
+  _health: 2
+  _isEnemy: 0
+  _healthUp: 0400000008000000
 --- !u!1 &6857160846017254820
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcb3dfc891758b4bb5bda8203c7ab02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthScript: {fileID: 4133653546514624148}
+  _healthScript: {fileID: 4133653546514624148}
 --- !u!1 &8776103592875823949
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,11 +5,11 @@ using System;
 
 public class HealthScript : MonoBehaviour
 {
-    [SerializeField] private int health;
-    [SerializeField] private bool isEnemy;
-    [SerializeField] private List<int> healthUp = new List<int>();
-    public int Health { get => health; }
-    public bool IsEnemy { get => isEnemy; }
+    [SerializeField] private int _health;
+    [SerializeField] private bool _isEnemy;
+    [SerializeField] private List<int> _healthUp = new List<int>();
+    public int Health { get => _health; }
+    public bool IsEnemy { get => _isEnemy; }
 
     public Action<GameObject, TypeTank> deadEvent;
     public Action<int> changeHealthEvent;
@@ -17,32 +17,32 @@ public class HealthScript : MonoBehaviour
 
     private void OnEnable()
     {
-        GetComponentInChildren<UpgradeTank>().upgradeEvent += ((int a) => SetHealth(healthUp[a]));
+        GetComponentInChildren<UpgradeTank>().upgradeEvent += ((int a) => SetHealth(_healthUp[a]));
     }
     private void OnDisable()
     {
-        GetComponentInChildren<UpgradeTank>().upgradeEvent -= ((int a) => SetHealth(healthUp[a]));
+        GetComponentInChildren<UpgradeTank>().upgradeEvent -= ((int a) => SetHealth(_healthUp[a]));
     }
 
     public void SetHealth(int value)
     {
-        health = value;
-        changeHealthEvent?.Invoke(health);
+        _health = value;
+        changeHealthEvent?.Invoke(_health);
     }
 
     public void Damage(int value)
     {
-        if (health > 0)
+        if (_health > 0)
         {
-            health -= value; 
-            if (health <= 0) deadEvent?.Invoke(gameObject, isEnemy ? TypeTank.red : TypeTank.blue);
+            _health -= value; 
+            if (_health <= 0) deadEvent?.Invoke(gameObject, _isEnemy ? TypeTank.red : TypeTank.blue);
         }
         else
         {
-            health = 0;
-            deadEvent?.Invoke(gameObject, isEnemy ? TypeTank.red : TypeTank.blue);
+            _health = 0;
+            deadEvent?.Invoke(gameObject, _isEnemy ? TypeTank.red : TypeTank.blue);
         }
-        changeHealthEvent?.Invoke(health);
+        changeHealthEvent?.Invoke(_health);
     }    
 
     private void OnTriggerEnter2D(Collider2D collision)

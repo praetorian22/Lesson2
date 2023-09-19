@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyShot : MonoBehaviour
 {
-    [SerializeField] private List<WeaponScript> weaponScripts;
+    [SerializeField] private List<WeaponScript> _weaponScripts;
 
     private void OnEnable()
     {
@@ -17,7 +17,7 @@ public class EnemyShot : MonoBehaviour
 
     private void Update()
     {
-        foreach (WeaponScript ws in weaponScripts)
+        foreach (WeaponScript ws in _weaponScripts)
         {
             if (ws.enabled) ws.Shot(transform.rotation, transform.parent);
         }        
@@ -27,21 +27,21 @@ public class EnemyShot : MonoBehaviour
     {
         if (level == 0)
         {
-            weaponScripts[0].enabled = true;
-            weaponScripts[1].enabled = false;
-            weaponScripts[2].enabled = false;
-            weaponScripts[3].enabled = false;
+            _weaponScripts[0].enabled = true;
+            _weaponScripts[1].enabled = false;
+            _weaponScripts[2].enabled = false;
+            _weaponScripts[3].enabled = false;
         }
         if (level == 1)
         {
-            weaponScripts[3].enabled = true;
+            _weaponScripts[3].enabled = true;
         }
         if (level == 2)
         {
-            weaponScripts[0].enabled = false;
-            weaponScripts[1].enabled = true;
-            weaponScripts[2].enabled = true;
-            weaponScripts[3].enabled = true;
+            _weaponScripts[0].enabled = false;
+            _weaponScripts[1].enabled = true;
+            _weaponScripts[2].enabled = true;
+            _weaponScripts[3].enabled = true;
         }
     }
 }

@@ -5,17 +5,17 @@ using System;
 
 public class MetalRemains : MonoBehaviour
 {
-    private int metalRemainsCount;
-    [SerializeField] private int metalRemainsCountMin;
-    [SerializeField] private int metalRemainsCountMax;
+    private int _metalRemainsCount;
+    [SerializeField] private int _metalRemainsCountMin;
+    [SerializeField] private int _metalRemainsCountMax;
 
-    public int MetalRemainsCount { get => metalRemainsCount; }
+    public int MetalRemainsCount { get => _metalRemainsCount; }
     public Action<GameObject> destroyRemainsEvent;
 
 
     private void Start()
     {
-        metalRemainsCount = UnityEngine.Random.Range(metalRemainsCountMin, metalRemainsCountMax);
+        _metalRemainsCount = UnityEngine.Random.Range(_metalRemainsCountMin, _metalRemainsCountMax);
     }
 
 }

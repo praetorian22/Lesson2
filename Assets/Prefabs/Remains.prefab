@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a80efa9f28942a94c876b978b4aa41ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  metalRemainsCountMin: 20
-  metalRemainsCountMax: 50
+  _metalRemainsCountMin: 20
+  _metalRemainsCountMax: 70
 --- !u!212 &4047590133812754059
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -107,10 +107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 6078609245098213169, guid: 22209c805e38c6647ae2a103e9a9b55f, type: 3}
-  timeReloadMin: 3
-  timeReloadMax: 6
-  pointToShot: {fileID: 9137439327086579774}
+  _shotPrefab: {fileID: 6078609245098213169, guid: 22209c805e38c6647ae2a103e9a9b55f, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 4
+  _pointToShot: {fileID: 9137439327086579774}
 --- !u!1 &4357480499662589285
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,10 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 5347814738600988827, guid: 38adcfb01c4d88342ba0fc696a0124b3, type: 3}
-  timeReloadMin: 3
-  timeReloadMax: 6
-  pointToShot: {fileID: 5766422270322841587}
+  _shotPrefab: {fileID: 6078609245098213169, guid: 22209c805e38c6647ae2a103e9a9b55f, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 4
+  _pointToShot: {fileID: 5766422270322841587}
 --- !u!1 &5833293649388774429
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,10 +205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 6078609245098213169, guid: 22209c805e38c6647ae2a103e9a9b55f, type: 3}
-  timeReloadMin: 3
-  timeReloadMax: 6
-  pointToShot: {fileID: 24208954351396735}
+  _shotPrefab: {fileID: 6078609245098213169, guid: 22209c805e38c6647ae2a103e9a9b55f, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 4
+  _pointToShot: {fileID: 24208954351396735}
 --- !u!1 &6426430960164739449
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,13 +285,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4904c542bf1ae9142a6be508787e8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLevel: 2
-  levelUpPoints: 0a00000032000000
-  spriteRenderer: {fileID: 2167887009401739513}
-  tankTextures:
-  - {fileID: -1234117907, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
-  - {fileID: 1626919855, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
-  - {fileID: -1675639934, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
+  _maxLevel: 2
+  _levelUpPoints: 3200000064000000
+  _spriteRenderer: {fileID: 2167887009401739513}
+  _tankTextures:
+  - {fileID: 2086979706, guid: eafe231bba859d44e9da342d7f10a1da, type: 3}
+  - {fileID: -536546625, guid: eafe231bba859d44e9da342d7f10a1da, type: 3}
 --- !u!58 &2327368814058282928
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -415,9 +414,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1db5323ee93de48bf581205cb42ee8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  timeRepositionMin: 3
-  timeRepositionMax: 10
+  _speed: 2
+  _timeRepositionMin: 3
+  _timeRepositionMax: 8
 --- !u!50 &4107248926978078197
 Rigidbody2D:
   serializedVersion: 4
@@ -477,11 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529b8dbf7792b3645a4bb7e90c4f165f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponScripts:
-  - {fileID: 8463917719409145406}
-  - {fileID: 5017372621705747024}
-  - {fileID: 4011989510876072571}
-  - {fileID: 7601135716164630476}
+  _weaponScripts: []
 --- !u!114 &279471942991676168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,9 +489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e82ee001a347334e8e4a2dcb662ff81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  isEnemy: 1
-  healthUp: 020000000400000008000000
+  _health: 2
+  _isEnemy: 1
+  _healthUp: 0400000008000000
 --- !u!1 &7815878412755020126
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcb3dfc891758b4bb5bda8203c7ab02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthScript: {fileID: 279471942991676168}
+  _healthScript: {fileID: 279471942991676168}
 --- !u!1 &8887460276799419263
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 6078609245098213169, guid: 22209c805e38c6647ae2a103e9a9b55f, type: 3}
-  timeReloadMin: 3
-  timeReloadMax: 6
-  pointToShot: {fileID: 6181214993298425660}
+  _shotPrefab: {fileID: 5347814738600988827, guid: 38adcfb01c4d88342ba0fc696a0124b3, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 4
+  _pointToShot: {fileID: 6181214993298425660}

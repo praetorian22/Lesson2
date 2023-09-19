@@ -547,7 +547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.34625003, y: 0.46500003}
   m_AnchorMax: {x: 0.6524999, y: 0.6574964}
-  m_AnchoredPosition: {x: 0.50009155, y: -0.7250004}
+  m_AnchoredPosition: {x: 0.50009155, y: -0.7249985}
   m_SizeDelta: {x: -0.75, y: 3.45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &212650382
@@ -1036,10 +1036,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
-  timeReloadMin: 1
-  timeReloadMax: 1
-  pointToShot: {fileID: 1395653025}
+  _shotPrefab: {fileID: 5189488823735920756, guid: edf5cd4c9557ce643886105538bb7b3c, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 2
+  _pointToShot: {fileID: 1395653025}
 --- !u!1 &492050651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,10 +1381,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 5189488823735920756, guid: edf5cd4c9557ce643886105538bb7b3c, type: 3}
-  timeReloadMin: 1
-  timeReloadMax: 1
-  pointToShot: {fileID: 672409038}
+  _shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 2
+  _pointToShot: {fileID: 672409038}
 --- !u!1 &588362511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,7 +1768,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.6
+  m_fontSize: 46.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1982,7 +1982,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.4
+  m_fontSize: 46.55
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2576,9 +2576,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ffe5fa36559f845b8b8d8cbf09d916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tank: {fileID: 274741169}
-  speed: 2
-  weaponScripts:
+  _tank: {fileID: 274741169}
+  _speed: 2
+  _weaponScripts:
   - {fileID: 1486957710}
   - {fileID: 489734569}
   - {fileID: 1511818597}
@@ -2595,9 +2595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e82ee001a347334e8e4a2dcb662ff81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  isEnemy: 0
-  healthUp: 020000000400000008000000
+  _health: 2
+  _isEnemy: 0
+  _healthUp: 640000002c010000
 --- !u!114 &1163255197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3067,13 +3067,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4904c542bf1ae9142a6be508787e8af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLevel: 2
-  levelUpPoints: 640000002c010000
-  spriteRenderer: {fileID: 274741170}
-  tankTextures:
-  - {fileID: -2078723621, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
-  - {fileID: 1957014284, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
-  - {fileID: -456218557, guid: 6173928bba23af34b838a711b8b354d8, type: 3}
+  _maxLevel: 2
+  _levelUpPoints: 640000002c010000
+  _spriteRenderer: {fileID: 274741170}
+  _tankTextures:
+  - {fileID: 184476739, guid: eafe231bba859d44e9da342d7f10a1da, type: 3}
+  - {fileID: 1267716097, guid: eafe231bba859d44e9da342d7f10a1da, type: 3}
 --- !u!58 &1425080184
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3166,10 +3165,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
-  timeReloadMin: 1
-  timeReloadMax: 1
-  pointToShot: {fileID: 1759143684}
+  _shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 2
+  _pointToShot: {fileID: 1759143684}
 --- !u!1 &1506346935
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,10 +3246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978f511cf0e7afc459713146de579432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
-  timeReloadMin: 1
-  timeReloadMax: 1
-  pointToShot: {fileID: 1774555688}
+  _shotPrefab: {fileID: 5066236815336661425, guid: 686ff8de1c6d96c4e98e8a5e39a544f2, type: 3}
+  _timeReloadMin: 1
+  _timeReloadMax: 2
+  _pointToShot: {fileID: 1774555688}
 --- !u!1 &1535956603
 GameObject:
   m_ObjectHideFlags: 0
@@ -99499,9 +99498,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a99967f909c5d584bba15648c0e8c605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueTankPrefab: {fileID: 6256041645724726308, guid: 9df19293421482044970a38159a13a68, type: 3}
-  redTankPrefab: {fileID: 7812796494939183544, guid: 1a60f870071d3364aafe5d35c66f8f7e, type: 3}
-  parent: {fileID: 1506346936}
+  _blueTankPrefab: {fileID: 6256041645724726308, guid: 9df19293421482044970a38159a13a68, type: 3}
+  _redTankPrefab: {fileID: 7812796494939183544, guid: 1a60f870071d3364aafe5d35c66f8f7e, type: 3}
+  _parent: {fileID: 1506346936}
   BlueTanks: []
   RedTanks: []
 --- !u!114 &2101877595
@@ -99516,7 +99515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 167c4c9ab557ca5479898af2383d3c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsSpawnBlue:
+  _pointsSpawnBlue:
   - {fileID: 466471860}
   - {fileID: 1018549248}
   - {fileID: 1724104589}
@@ -99526,7 +99525,7 @@ MonoBehaviour:
   - {fileID: 1598475454}
   - {fileID: 1843899442}
   - {fileID: 24903203}
-  pointsSpawnRed:
+  _pointsSpawnRed:
   - {fileID: 518360783}
   - {fileID: 1851802127}
   - {fileID: 862596239}
@@ -99536,11 +99535,11 @@ MonoBehaviour:
   - {fileID: 1940723936}
   - {fileID: 515388846}
   - {fileID: 1461879693}
-  blueCount: 15
-  redCount: 30
-  player: {fileID: 1163255190}
-  startHealtPlayer: 2
-  startPositionPlayer: {fileID: 1346522409}
+  _blueCount: 20
+  _redCount: 50
+  _player: {fileID: 1163255190}
+  _startHealtPlayer: 2
+  _startPositionPlayer: {fileID: 1346522409}
 --- !u!4 &2101877596
 Transform:
   m_ObjectHideFlags: 0
@@ -99568,19 +99567,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca127fec645b3c4399fa87e8599b9ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCount: {fileID: 1688861112}
-  blueCount: {fileID: 1328917683}
-  redCount: {fileID: 74012712}
-  teamWins: {fileID: 1535956605}
-  play: {fileID: 1731357997}
-  exit: {fileID: 1687655608}
-  exit2: {fileID: 23455174}
-  newGame: {fileID: 212650382}
-  panelEndGame: {fileID: 788795144}
-  screens:
+  _healthCount: {fileID: 1688861112}
+  _blueCount: {fileID: 1328917683}
+  _redCount: {fileID: 74012712}
+  _teamWins: {fileID: 1535956605}
+  _play: {fileID: 1731357997}
+  _exit: {fileID: 1687655608}
+  _exit2: {fileID: 23455174}
+  _newGame: {fileID: 212650382}
+  _panelEndGame: {fileID: 788795144}
+  _screens:
   - {fileID: 519420028}
   - {fileID: 1163255190}
-  settings: {fileID: 488200648}
+  _settings: {fileID: 488200648}
 --- !u!114 &2101877598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99593,13 +99592,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a009147f79179d4f986e1a5d4a762e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remainsPrefab: {fileID: 7986616956897526055, guid: 55baa615497079a4698560b2fbc6ad6d, type: 3}
-  timeRandomSpawnMin: 5
-  timeRandomSpawnMax: 10
-  chanceSpawn: 20
-  borderLD: {fileID: 1880632205}
-  borderUR: {fileID: 819840133}
-  parent: {fileID: 1506346936}
+  _remainsPrefab: {fileID: 7986616956897526055, guid: 55baa615497079a4698560b2fbc6ad6d, type: 3}
+  _timeRandomSpawnMin: 10
+  _timeRandomSpawnMax: 20
+  _chanceSpawn: 20
+  _borderLD: {fileID: 1880632205}
+  _borderUR: {fileID: 819840133}
+  _parent: {fileID: 1506346936}
 --- !u!114 &2101877599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99612,8 +99611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b17d31b9407f44e95c6a978faeb595, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boom: {fileID: 1753607616118201504, guid: 6fffa19e9dc50db43ae13fb7f683ad0a, type: 3}
-  BoomShot: {fileID: 8835327909373639705, guid: 67f7ac0f9481ce9428025b06b09841f2, type: 3}
+  _boom: {fileID: 1753607616118201504, guid: 6fffa19e9dc50db43ae13fb7f683ad0a, type: 3}
+  _boomShot: {fileID: 8835327909373639705, guid: 67f7ac0f9481ce9428025b06b09841f2, type: 3}
   parent: {fileID: 1506346936}
 --- !u!1 &2122964083
 GameObject:
@@ -99686,4 +99685,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcb3dfc891758b4bb5bda8203c7ab02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthScript: {fileID: 1163255196}
+  _healthScript: {fileID: 1163255196}

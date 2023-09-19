@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4d105677d08144796390266f9ea083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  _speed: 5
 --- !u!114 &5118290750545977972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4bc87ec74c5c044b8e127ab1a62c407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  isEnemyShot: 1
-  timeLife: 2
+  _damage: 1
+  _isEnemyShot: 1
+  _timeLife: 2
