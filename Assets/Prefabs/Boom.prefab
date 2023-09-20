@@ -1424,7 +1424,7 @@ ParticleSystem:
   UVModule:
     serializedVersion: 2
     enabled: 1
-    mode: 1
+    mode: 0
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -1534,13 +1534,13 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     speedRange: {x: 0, y: 1}
-    tilesX: 1
-    tilesY: 1
+    tilesX: 5
+    tilesY: 4
     animationType: 0
     rowIndex: 0
     cycles: 1
     uvChannelMask: -1
-    rowMode: 1
+    rowMode: 0
     sprites:
     - sprite: {fileID: 5236880236491022303, guid: cacd1ba2603a29e46b6514ad15b21018, type: 3}
     - sprite: {fileID: 3764063829883252285, guid: cacd1ba2603a29e46b6514ad15b21018, type: 3}
@@ -4874,7 +4874,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8eee4c54ab203fd48b44d0fa85b634a7, type: 2}
+  - {fileID: 2100000, guid: 0602598de090fc349ad0f7d8e1472df9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9809,6 +9809,10 @@ PrefabInstance:
     - target: {fileID: 4059406602286692098, guid: 8404c524cea367840b02435e20d97447, type: 3}
       propertyPath: m_Name
       value: SmokeEffe
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059406602286692098, guid: 8404c524cea367840b02435e20d97447, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8563614375368191065, guid: 8404c524cea367840b02435e20d97447, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time
