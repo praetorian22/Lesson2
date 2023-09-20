@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class WeaponScript : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class WeaponScript : MonoBehaviour
     [SerializeField] private Transform _pointToShot;
     
 
-    private bool _readyToShot;    
+    private bool _readyToShot;
+
+    public Action<Vector3> shotEvent;
 
     private void Start()
     {
@@ -20,7 +23,7 @@ public class WeaponScript : MonoBehaviour
     public IEnumerator ReloadTimer()
     {
         _readyToShot = false;
-        yield return new WaitForSeconds(Random.Range(_timeReloadMin, _timeReloadMax));
+        yield return new WaitForSeconds(UnityEngine.Random.Range(_timeReloadMin, _timeReloadMax));
         _readyToShot = true;
     }
 
@@ -28,7 +31,8 @@ public class WeaponScript : MonoBehaviour
     {
         if (_readyToShot)
         {
-            GameObject shot = Instantiate(_shotPrefab, _pointToShot.position, rotation, parent);            
+            GameObject shot = Instantiate(_shotPrefab, _pointToShot.position, rotation, parent);
+            shotEvent?.Invoke(gameObject.transform.position);
             StartCoroutine(ReloadTimer());
         }
     }
